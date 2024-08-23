@@ -1,0 +1,22 @@
+[
+    {
+        "code": "en",
+        "localName": "English",
+        "name": "English",
+        "langDir": "ltr",
+        "dateFormat": "MM.DD.YYYY",
+        "hrefLang": "en-GB",
+        "enabled": false,
+        "default": false
+    },
+    {
+        "code": "pt-br",
+        "localName": "Português do Brasil",
+        "name": "Brazilian Portuguese",
+        "langDir": "ltr",
+        "dateFormat": "DD.MM.YYYY",
+        "hrefLang": "pt-BR",
+        "enabled": true,
+        "default": true
+    }
+]

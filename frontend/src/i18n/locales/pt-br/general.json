@@ -1,0 +1,24 @@
+{
+    "general": {
+        "home": {
+            "required": "Obrigatório",
+            "cancel": "Cancelar",
+            "create": "Criar",
+            "createNew": "Crie novo",
+            "body": {
+                "title": "Loja"
+            },
+            "organization": {
+                "create": "Crie sua Organização"
+            },
+            "company": {
+                "name": "Nome da Empresa",
+                "namePlaceholder": "Nome fantasia",
+                "corporateName": "Razão Social",
+                "corporateNamePlaceholder": "Razão Social",
+                "cnpj": "CNPJ",
+                "cnpjPlaceholder": "xx.xxx.xxx/xxxx-xx"
+            }
+        }
+    }
+}

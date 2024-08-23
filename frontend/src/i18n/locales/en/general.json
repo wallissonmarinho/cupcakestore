@@ -1,0 +1,24 @@
+{
+    "general": {
+        "home": {
+            "required": "Required",
+            "cancel": "Cancel",
+            "create": "Create",
+            "createNew": "Create New",
+            "body": {
+                "title": "Organization"
+            },
+            "organization": {
+                "create": "Create your Organization"
+            },
+            "company": {
+                "name": "Company Name",
+                "namePlaceholder": "Fantasy Name",
+                "corporateName": "Corporate Name",
+                "corporateNamePlaceholder": "Corporate Name",
+                "cnpj": "CNPJ",
+                "cnpjPlaceholder": "xx.xxx.xxx/xxxx-xx"
+            }
+        }
+    }
+}

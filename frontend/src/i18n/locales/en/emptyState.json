@@ -1,0 +1,13 @@
+{
+    "emptyState": {
+        "home": {
+            "create": {
+                "organization": {
+                    "title": "Você ainda não criou nenhuma organização",
+                    "description": "Crie uma nova organização no botão abaixo",
+                    "button": "Criar Organização"
+                }
+            }
+        }
+    }
+}
