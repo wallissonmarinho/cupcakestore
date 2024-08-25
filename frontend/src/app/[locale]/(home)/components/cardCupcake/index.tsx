@@ -9,6 +9,7 @@ import Grid from '@mui/material/Grid'
 import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
 import WallpaperRoundedIcon from '@mui/icons-material/WallpaperRounded'
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 type Props = {
   name: string
@@ -21,7 +22,7 @@ function CardCupcake({ name }: Props) {
     <Card
       sx={{
         width: 275,
-        height: 411,
+        height: 368,
         borderRadius: 2,
         display: 'flex',
         justifyContent: 'center',
@@ -55,19 +56,68 @@ function CardCupcake({ name }: Props) {
             </Box>
           </Grid>
 
-          <Grid item xs={12} textAlign={'center'} >
-            <Typography variant="body2" component="div">
+          <Grid item xs={12}>
+            <Typography variant="body2" component="div" sx={{ textAlign: 'left' }}>
               {name.length > 30 ? `${name.slice(0, 30)}...` : name}
             </Typography>
           </Grid>
-          <Grid item xs={12} sx={{ my: 1.8 }}>
-            <Button
-              fullWidth
-              variant="contained"
-              sx={{ width: 157 }}
-            >
-              Entrar
-            </Button>
+          <Grid item xs={12}>
+            <Typography variant="body2" component="div" sx={{ textAlign: 'left' }}>
+              R$ 6,00
+            </Typography>
+          </Grid>
+
+          <Grid item xs={12} >
+            <Grid container spacing={1}
+              alignItems={'center'}
+              justifyContent="center">
+              <Grid item xs={6}>
+                <Box
+                  sx={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    gap: 1,
+                  }}
+                >
+                  <Button
+                    variant="outlined"
+                    sx={{
+                      width: 23,
+                      height: 36,
+                      minWidth: 'unset',
+                    }}
+                  >
+                    -
+                  </Button>
+
+                  <Typography variant="body2" component="div">
+                    1
+                  </Typography>
+
+                  <Button
+                    variant="outlined"
+                    sx={{
+                      width: 23,
+                      height: 36,
+                      minWidth: 'unset',
+                    }}
+                  >
+                    +
+                  </Button>
+                </Box>
+              </Grid>
+              <Grid item xs={6}>
+                <Button
+                  fullWidth
+                  variant="contained"
+                  sx={{ width: 120 }}
+                  startIcon={<ShoppingCartOutlinedIcon />}
+                >
+                  Adicionar
+                </Button>
+              </Grid>
+            </Grid>
           </Grid>
         </Grid>
       </CardContent>

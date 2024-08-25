@@ -8,7 +8,7 @@ import Pagination from '@mui/material/Pagination';
 export default function Home() {
   const t = useTranslations('general.home');
   const cupcakes = [
-    { name: 'TeslaTeslaTeslaTeslaTeslaTesladxfgx', code: 'sdf65sdf545' },
+    { name: 'Cupcake Chocolate', code: 'sdf65sdf545' },
   ];
 
   return (
