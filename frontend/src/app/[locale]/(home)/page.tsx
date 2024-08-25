@@ -2,21 +2,13 @@ import Box from '@mui/material/Box';
 import { useTranslations } from 'next-intl';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
-import CardOrganization from './components/cardOrganization';
+import CardCupcake from './components/cardCupcake';
 import Pagination from '@mui/material/Pagination';
 
 export default function Home() {
   const t = useTranslations('general.home');
-  const organizations = [
+  const cupcakes = [
     { name: 'TeslaTeslaTeslaTeslaTeslaTesladxfgx', code: 'sdf65sdf545' },
-    { name: 'SpaceX', code: 'sdf65sdf545' },
-    { name: 'X', code: 'sdf65sdf545' },
-    { name: 'Fiat', code: 'sdf65sdf545' },
-    { name: 'Hyundai', code: 'sdf65sdf545' },
-    { name: 'Honda', code: 'sdf65sdf545' },
-    { name: 'Hyundai', code: 'sdf65sdf545' },
-    { name: 'Honda', code: 'sdf65sdf545' },
-    { name: 'Toyota' },
   ];
 
   return (
@@ -28,13 +20,13 @@ export default function Home() {
       </Box>
 
       <Box sx={{ flexGrow: 1 }}>
-        {organizations.length > 0 && (
+        {cupcakes.length > 0 && (
           <Grid container spacing={2}>
             <Grid item xs={12}>
               <Grid container rowSpacing={3} spacing={4} columns={{ xl: 17 }}>
-                {organizations.map((organization) => (
+                {cupcakes.map((organization) => (
                   <Grid item key={organization.name}>
-                    <CardOrganization
+                    <CardCupcake
                       name={organization.name}
                       code={organization.code || ""}
                     />

@@ -7,22 +7,25 @@ import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
 import Grid from '@mui/material/Grid'
 import Typography from '@mui/material/Typography'
-import WallpaperRoundedIcon from '@mui/icons-material/WallpaperRounded'
 import Button from '@mui/material/Button'
+import WallpaperRoundedIcon from '@mui/icons-material/WallpaperRounded'
 
 type Props = {
   name: string
   code: string
 }
 
-function CardOrganization({ name }: Props) {
+function CardCupcake({ name }: Props) {
 
   return (
     <Card
       sx={{
-        width: 251,
-        height: 270,
+        width: 275,
+        height: 411,
         borderRadius: 2,
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
       }}
     >
       <CardContent>
@@ -31,28 +34,23 @@ function CardOrganization({ name }: Props) {
           spacing={1}
           direction="column"
           alignItems="center"
-
         >
           <Grid item xs={12} >
-            <Box
-              sx={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
-            >
+            <Box>
               <Badge>
                 <Avatar
+                  variant="rounded"
                   style={{
                     backgroundColor: '#EBEBEB',
-                    width: 120,
-                    height: 120,
+                    width: 257,
+                    height: 233,
                   }}
                 >
                   <WallpaperRoundedIcon
                     style={{ fontSize: 50, color: '#A4AABF' }}
                   />
                 </Avatar>
+
               </Badge>
             </Box>
           </Grid>
@@ -60,11 +58,6 @@ function CardOrganization({ name }: Props) {
           <Grid item xs={12} textAlign={'center'} >
             <Typography variant="body2" component="div">
               {name.length > 30 ? `${name.slice(0, 30)}...` : name}
-            </Typography>
-          </Grid>
-          <Grid item xs={12} >
-            <Typography variant="subtitle2" component="div">
-              CNPJ: 11.***.***/****-82
             </Typography>
           </Grid>
           <Grid item xs={12} sx={{ my: 1.8 }}>
@@ -82,4 +75,4 @@ function CardOrganization({ name }: Props) {
   )
 }
 
-export default CardOrganization
+export default CardCupcake
