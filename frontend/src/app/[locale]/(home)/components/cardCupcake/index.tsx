@@ -8,7 +8,7 @@ import CardContent from '@mui/material/CardContent'
 import Grid from '@mui/material/Grid'
 import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
-import WallpaperRoundedIcon from '@mui/icons-material/WallpaperRounded'
+import CakeOutlinedIcon from '@mui/icons-material/CakeOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 type Props = {
@@ -47,7 +47,7 @@ function CardCupcake({ name }: Props) {
                     height: 233,
                   }}
                 >
-                  <WallpaperRoundedIcon
+                  <CakeOutlinedIcon
                     style={{ fontSize: 50, color: '#A4AABF' }}
                   />
                 </Avatar>
