@@ -1,17 +1,20 @@
+'use client';
+
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import UserMenu from '@/shared/components/userMenu';
-import Tooltip from '@mui/material/Tooltip';
 import Stack from '@mui/material/Stack';
-import IconButton from '@mui/material/IconButton';
-import Divider from '@mui/material/Divider';
 import Image from 'next/image'
-import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined'
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
+import { useRouter } from 'next/navigation';
 
 function Header() {
+  const router = useRouter();
+  const handleCheckout = (path: string) => {
+    router.push(path);
+  };
+
   return (
     <AppBar position="static">
       <Container
@@ -26,24 +29,28 @@ function Header() {
             <Button
               fullWidth
               variant="text"
+              onClick={() => handleCheckout('/')}
             >
               Início
             </Button>
             <Button
               fullWidth
               variant="text"
+              onClick={() => handleCheckout('/cart')}
             >
               Carrinho
             </Button>
             <Button
               fullWidth
               variant="text"
+              onClick={() => handleCheckout('/orders')}
             >
               Pedidos
             </Button>
             <Button
               fullWidth
               variant="text"
+              onClick={() => handleCheckout('/profile')}
             >
               Perfil
             </Button>
@@ -53,6 +60,7 @@ function Header() {
               fullWidth
               variant="contained"
               sx={{ width: 157 }}
+              onClick={() => handleCheckout('/')}
             >
               Dashboard
             </Button>
@@ -60,6 +68,7 @@ function Header() {
               fullWidth
               variant="outlined"
               sx={{ width: 93 }}
+              onClick={() => handleCheckout('/')}
             >
               Entrar
             </Button>
