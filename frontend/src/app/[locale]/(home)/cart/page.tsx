@@ -11,6 +11,8 @@ import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableFooter from '@mui/material/TableFooter';
 import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 export default function Cart() {
   const t = useTranslations('general.home');
@@ -34,7 +36,8 @@ export default function Cart() {
               <TableCell sx={{ borderBottom: "2px solid #EFEFFF", borderTopLeftRadius: '10px' }}>Nome do produto</TableCell>
               <TableCell sx={{ borderBottom: "2px solid #EFEFFF" }} align="right">Valor</TableCell>
               <TableCell sx={{ borderBottom: "2px solid #EFEFFF" }} align="right">Quantidade</TableCell>
-              <TableCell sx={{ borderBottom: "2px solid #EFEFFF", borderTopRightRadius: '10px' }} align="right">Subtotal</TableCell>
+              <TableCell sx={{ borderBottom: "2px solid #EFEFFF" }} align="right">Subtotal</TableCell>
+              <TableCell sx={{ borderBottom: "2px solid #EFEFFF", borderTopRightRadius: '10px' }} align="right">Ações</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -51,6 +54,11 @@ export default function Cart() {
               <TableCell sx={{ borderBottom: "2px solid #EFEFFF" }} align="right">
                 R$ 6,00
               </TableCell>
+              <TableCell sx={{ borderBottom: "2px solid #EFEFFF" }} align="right">
+                <IconButton color="error" aria-label="delete">
+                  <DeleteIcon />
+                </IconButton>
+              </TableCell>
             </TableRow>
             <TableRow sx={{ backgroundColor: "#E8EBF8" }}>
               <TableCell sx={{ borderBottom: "2px solid #EFEFFF" }} component="th" scope="row">
@@ -65,11 +73,16 @@ export default function Cart() {
               <TableCell sx={{ borderBottom: "2px solid #EFEFFF" }} align="right">
                 R$ 16,00
               </TableCell>
+              <TableCell sx={{ borderBottom: "2px solid #EFEFFF" }} align="right">
+                <IconButton color="error" aria-label="delete">
+                  <DeleteIcon />
+                </IconButton>
+              </TableCell>
             </TableRow>
           </TableBody>
           <TableFooter>
             <TableRow sx={{ backgroundColor: "#E8EBF8" }}>
-              <TableCell sx={{ borderBottom: "2px solid #EFEFFF" }} colSpan={4}>
+              <TableCell sx={{ borderBottom: "2px solid #EFEFFF" }} colSpan={5}>
                 <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                   <Typography variant="h6">
                     Total: R$ 22,00
