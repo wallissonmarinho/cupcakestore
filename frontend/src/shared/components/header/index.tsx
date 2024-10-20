@@ -4,16 +4,22 @@ import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Stack from '@mui/material/Stack';
-import Image from 'next/image'
+import Image from 'next/image';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
+import { Colors } from '@/styles/theme/colors';
 
 function Header() {
   const router = useRouter();
+  const pathname = usePathname();
+
   const handleCheckout = (path: string) => {
     router.push(path);
   };
+
+
+  const isSelected = (path: string) => pathname === path;
 
   return (
     <AppBar position="static">
@@ -29,6 +35,10 @@ function Header() {
             <Button
               fullWidth
               variant="text"
+              sx={{
+                borderBottom: isSelected('/') ? `1px solid ${Colors.primary}` : 'none',
+                borderRadius: 0,
+              }}
               onClick={() => handleCheckout('/')}
             >
               Início
@@ -36,6 +46,10 @@ function Header() {
             <Button
               fullWidth
               variant="text"
+              sx={{
+                borderBottom: isSelected('/cart') ? `1px solid ${Colors.primary}` : 'none',
+                borderRadius: 0,
+              }}
               onClick={() => handleCheckout('/cart')}
             >
               Carrinho
@@ -43,6 +57,10 @@ function Header() {
             <Button
               fullWidth
               variant="text"
+              sx={{
+                borderBottom: isSelected('/orders') ? `1px solid ${Colors.primary}` : 'none',
+                borderRadius: 0,
+              }}
               onClick={() => handleCheckout('/orders')}
             >
               Pedidos
@@ -50,6 +68,10 @@ function Header() {
             <Button
               fullWidth
               variant="text"
+              sx={{
+                borderBottom: isSelected('/profile') ? `1px solid ${Colors.primary}` : 'none',
+                borderRadius: 0,
+              }}
               onClick={() => handleCheckout('/profile')}
             >
               Perfil
@@ -60,7 +82,7 @@ function Header() {
               fullWidth
               variant="contained"
               sx={{ width: 157 }}
-              onClick={() => handleCheckout('/')}
+              onClick={() => handleCheckout('/dashboard')}
             >
               Dashboard
             </Button>
@@ -68,7 +90,7 @@ function Header() {
               fullWidth
               variant="outlined"
               sx={{ width: 93 }}
-              onClick={() => handleCheckout('/')}
+              onClick={() => handleCheckout('/login')}
             >
               Entrar
             </Button>
@@ -78,4 +100,5 @@ function Header() {
     </AppBar>
   );
 }
+
 export default Header;
