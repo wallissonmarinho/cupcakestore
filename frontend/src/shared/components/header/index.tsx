@@ -14,7 +14,7 @@ function Header() {
   const router = useRouter();
   const pathname = usePathname();
 
-  const handleCheckout = (path: string) => {
+  const navigateTo = (path: string) => {
     router.push(path);
   };
 
@@ -39,7 +39,7 @@ function Header() {
                 borderBottom: isSelected('/') ? `1px solid ${Colors.primary}` : 'none',
                 borderRadius: 0,
               }}
-              onClick={() => handleCheckout('/')}
+              onClick={() => navigateTo('/')}
             >
               Início
             </Button>
@@ -50,7 +50,7 @@ function Header() {
                 borderBottom: isSelected('/cart') ? `1px solid ${Colors.primary}` : 'none',
                 borderRadius: 0,
               }}
-              onClick={() => handleCheckout('/cart')}
+              onClick={() => navigateTo('/cart')}
             >
               Carrinho
             </Button>
@@ -61,7 +61,7 @@ function Header() {
                 borderBottom: isSelected('/orders') ? `1px solid ${Colors.primary}` : 'none',
                 borderRadius: 0,
               }}
-              onClick={() => handleCheckout('/orders')}
+              onClick={() => navigateTo('/orders')}
             >
               Pedidos
             </Button>
@@ -72,7 +72,7 @@ function Header() {
                 borderBottom: isSelected('/profile') ? `1px solid ${Colors.primary}` : 'none',
                 borderRadius: 0,
               }}
-              onClick={() => handleCheckout('/profile')}
+              onClick={() => navigateTo('/profile')}
             >
               Perfil
             </Button>
@@ -82,7 +82,7 @@ function Header() {
               fullWidth
               variant="contained"
               sx={{ width: 157 }}
-              onClick={() => handleCheckout('/dashboard')}
+              onClick={() => navigateTo('/dashboard')}
             >
               Dashboard
             </Button>
@@ -90,7 +90,7 @@ function Header() {
               fullWidth
               variant="outlined"
               sx={{ width: 93 }}
-              onClick={() => handleCheckout('/login')}
+              onClick={() => navigateTo('/login')}
             >
               Entrar
             </Button>

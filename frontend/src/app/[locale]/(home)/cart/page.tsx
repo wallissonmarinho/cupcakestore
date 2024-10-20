@@ -17,7 +17,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 export default function Cart() {
   const t = useTranslations('general.home');
   const router = useRouter();
-  const handleCheckout = (path: string) => {
+  const navigateTo = (path: string) => {
     router.push(path);
   };
 
@@ -91,11 +91,15 @@ export default function Cart() {
                     <Button
                       variant="outlined"
                       sx={{ mr: 1 }}
-                      onClick={() => handleCheckout('/')}
+                      onClick={() => navigateTo('/')}
                     >
                       Adicionar Itens
                     </Button>
-                    <Button variant="contained" color="primary">
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      onClick={() => navigateTo('/cart/checkout')}
+                    >
                       Checkout
                     </Button>
                   </Box>
