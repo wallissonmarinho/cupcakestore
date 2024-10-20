@@ -99,29 +99,25 @@ export default function Checkout() {
         <Table>
           <TableHead sx={{ backgroundColor: "#D6DDFD" }}>
             <TableRow>
-              <TableCell sx={{ borderBottom: "2px solid #EFEFFF", borderTopLeftRadius: '10px' }}>Status do pedido</TableCell>
-              <TableCell sx={{ borderBottom: "2px solid #EFEFFF" }} align="right">Método de pagamento</TableCell>
-              <TableCell sx={{ borderBottom: "2px solid #EFEFFF" }} align="right">Tipo de entrega</TableCell>
-              <TableCell sx={{ borderBottom: "2px solid #EFEFFF" }} align="right">Data do pedido</TableCell>
-              <TableCell sx={{ borderBottom: "2px solid #EFEFFF", borderTopRightRadius: '10px' }} align="right">Total</TableCell>
+              <TableCell sx={{ borderBottom: "2px solid #EFEFFF", borderTopLeftRadius: '10px' }}>Nome do produto</TableCell>
+              <TableCell sx={{ borderBottom: "2px solid #EFEFFF" }}>Valor</TableCell>
+              <TableCell sx={{ borderBottom: "2px solid #EFEFFF" }}>Quantidade</TableCell>
+              <TableCell sx={{ borderBottom: "2px solid #EFEFFF", borderTopRightRadius: '10px' }}>Total</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             <TableRow sx={{ backgroundColor: "#E8EBF8" }}>
-              <TableCell sx={{ borderBottom: "2px solid #EFEFFF" }} component="th" scope="row">
-                A caminho
+              <TableCell sx={{ borderBottom: "2px solid #EFEFFF" }}>
+                Cupcake Chocolate
               </TableCell>
-              <TableCell sx={{ borderBottom: "2px solid #EFEFFF" }} align="right">
-                Cartão 3205*****9080
+              <TableCell sx={{ borderBottom: "2px solid #EFEFFF" }}>
+                R$ 6,00
               </TableCell>
-              <TableCell sx={{ borderBottom: "2px solid #EFEFFF" }} align="right">
-                Correios
+              <TableCell sx={{ borderBottom: "2px solid #EFEFFF" }}>
+                01
               </TableCell>
-              <TableCell sx={{ borderBottom: "2px solid #EFEFFF" }} align="right">
-                26/05/2024
-              </TableCell>
-              <TableCell sx={{ borderBottom: "2px solid #EFEFFF" }} align="right">
-                R$100,00
+              <TableCell sx={{ borderBottom: "2px solid #EFEFFF" }}>
+                R$ 6,00
               </TableCell>
             </TableRow>
           </TableBody>
@@ -181,22 +177,6 @@ export default function Checkout() {
                 <Typography variant="h6">Valor do produto</Typography>
                 <Table>
                   <TableBody>
-                    <TableRow>
-                      <TableCell sx={{ borderBottom: "2px solid #EFEFFF" }} component="th" scope="row">
-                        Subtotal
-                      </TableCell>
-                      <TableCell sx={{ borderBottom: "2px solid #EFEFFF" }} align="right">
-                        R$ 100,00
-                      </TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell sx={{ borderBottom: "2px solid #EFEFFF" }} component="th" scope="row">
-                        Entrega
-                      </TableCell>
-                      <TableCell sx={{ borderBottom: "2px solid #EFEFFF" }} align="right">
-                        Grátis
-                      </TableCell>
-                    </TableRow>
                     <TableRow>
                       <TableCell sx={{ borderBottom: "2px solid #EFEFFF" }} component="th" scope="row">
                         Total
