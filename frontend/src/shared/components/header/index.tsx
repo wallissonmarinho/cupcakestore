@@ -18,8 +18,12 @@ function Header() {
     router.push(path);
   };
 
-
-  const isSelected = (path: string) => pathname === path;
+  const isSelected = (path: string) => {
+    if (path === '/') {
+      return pathname === path;
+    }
+    return pathname.startsWith(path);
+  };
 
   return (
     <AppBar position="static">
